@@ -26,7 +26,8 @@ end
 def reduce_to_total(source_array, starting_point = 0)
   total = source_array[starting_point];
   starting_point +=1
-  (source_array.length - starting_point).times{|index|
-  total += source_array[starting_point + index]}
+  while starting_point < source_array.length do
+    total +=source_array[starting_point]
+  end
   total
 end   
